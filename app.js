@@ -40,18 +40,18 @@ function reiniciarJogo() {
     numeroSecreto = gerarNumeroAleatorio();
     tentativas = 0;
     mudarTexto('h1', 'Jogo do numero secreto');
-    mudarTexto('p', "escolha um numero entre 1 e 10");
+    mudarTexto('p', "escolha um numero entre 1 e 100");
     document.getElementById('reiniciar').setAttribute('disabled', true);
 
 }
 
 function gerarNumeroAleatorio() {
 
-    let numeroAleatorio = parseInt(Math.random() * 10 + 1);
+    let numeroAleatorio = parseInt(Math.random() * 100 + 1);
 
     let quantidadeNumerosSorteados = listaNumerosSorteados.length;
 
-    if(quantidadeNumerosSorteados == 10) {
+    if(quantidadeNumerosSorteados == 100) {
         listaNumerosSorteados = [];
     }
 
